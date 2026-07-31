@@ -5,7 +5,7 @@ import hljs from "highlight.js/lib/common";
 import localFont from "next/font/local";
 
 const demine3d = localFont({
-  src: "./fonts/Demine-ExtrudeRight.otf",
+  src: "../Demine-ExtrudeRight.otf",
 });
 
 type Severity = "critical" | "high" | "medium" | "low";
@@ -567,7 +567,7 @@ export default function Home() {
                         <span>
                           O(
                           {analysis.timeComplexity.overall.replace(
-                            /^O?\(?\)?$/g,
+                            /^O?\(?|\)?$/g,
                             ""
                           )}
                           )
