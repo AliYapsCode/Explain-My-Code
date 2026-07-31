@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "highlight.js/styles/atom-one-light.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #a855f7;
+  color: #fff;
+}
+
+/* ---- Editor text metrics (shared by gutter, pre & textarea) ---- */
+.editor-text {
+  font-family: var(--font-mono), ui-monospace, "Cascadia Code", monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  tab-size: 4;
+}
+
+/* highlight.js sits on top of our dark editor bg */
+.hljs {
+  background: transparent;
+  padding: 0;
+}
+
+/* ---- Editor scrollbar (VS Code light style) ---- */
+.editor-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #f1f5f9;
+}
+
+.editor-scroll::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.editor-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.editor-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+  border: 3px solid #f1f5f9;
+}
+
+.editor-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.editor-scroll::-webkit-scrollbar-corner {
+  background: #f1f5f9;
+}
